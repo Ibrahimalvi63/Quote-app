@@ -1,0 +1,90 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #333;
+}
+
+.container {
+  width: 65%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: antiquewhite;
+  text-align: center;
+  padding: 20px 40px;
+  border-radius: 10px;
+}
+.quote-app {
+  width: fit-content;
+  padding: 10px 20px;
+  min-height: fit-content;
+}
+.quote-app h1 {
+  font-size: 40px;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.quote-app h1::after {
+  position: absolute;
+  content: "";
+  height: 4px;
+  width: 50%;
+  background-color: green;
+  bottom: 0;
+  left: 0;
+  transform: translateX(50%);
+}
+.quote-app #quote {
+  font-size: 25px;
+  font-weight: 900;
+  margin: 10px 0;
+}
+.quote-app #quote::before,
+.quote-app #quote::after {
+  content: '"';
+}
+.quote-app span {
+  display: block;
+  float: right;
+  position: relative;
+  margin-bottom: 20px;
+}
+.quote-app span::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 20px;
+  background-color: green;
+  transform: translate(-120%, -350%);
+}
+
+.container .buttons {
+  margin: 40px auto 10px;
+}
+.buttons button {
+  font-size: 17px;
+  padding: 5px 20px;
+  border-radius: 30px;
+  background-color: green;
+  outline: none;
+  border: 1px solid green;
+  color: rgb(235, 232, 232);
+}
+.buttons button:nth-child(2) {
+  background-color: transparent;
+  margin-left: 20px;
+
+  color: green;
+}
+
+.buttons button:nth-child(2) img {
+  width: 13px;
+  margin-right: 5px;
+}
